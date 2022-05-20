@@ -355,7 +355,7 @@ footer .social-media{
 .contacto .form-contact{
     grid-area: formulario;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 6px;
     padding: 16px 0;
     background-color: #2cb7ee6e;
 }
