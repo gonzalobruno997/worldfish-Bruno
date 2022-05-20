@@ -511,7 +511,7 @@ footer .social-media{
     grid-area: tituloSeccion;
     text-align: center;
     margin-bottom: 32px;
-    font-size: 42px;
+    font-size:42px;
     animation-name: tituloDesplazamiento;
     animation-duration: 2s;
 }
