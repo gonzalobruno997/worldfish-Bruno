@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Oswald', sans-serif;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.img-width{
+    width: 100%;
+}
+.active{
+    color: #fff;
+    border-bottom: 1px solid;
+}
+.logo a{
+    color: #000;
+    text-decoration: none;
+}
+.logo a:hover{
+    color: #fff;
+}
+/* estilos del header del index */
+header{
+    width: 100%;
+    background-color: #2cb7ee;
+    font-size: 50px;
+    color: #000000;
+    padding: 20px 0;
+}
+header .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "logo navMenu navMenu";
+}
+header nav{
+    grid-area: navMenu;
+}
+
+.logo{
+    grid-area: logo;
+}
+.logo:hover{
+    color: #ffffff;
+}
+.nav1 ul{
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    align-items: center;
+}
+.nav1 ul li{
+    list-style: none;
+    margin-right: 18px;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.nav1 ul li a{
+    text-decoration: none;
+    color: #000000;
+    margin-left: 6px;
+}
+.nav1 ul li:hover a, .nav1 ul li:hover i{
+    color: #fff;
+}
+/* ESTILOS SECCION BIENVENIDA */
+.seccion-bienvenida{
+    padding: 32px 0;
+    width: 100%;
+    background-image: url(../img/mar.jpg);
+    background-size: cover;
+}
+.seccion-bienvenida h1{
+    text-align: center;
+    font-size: 42px;
+    grid-area: tituloBienvenida;
+}
+.seccion-bienvenida .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 600px;
+    grid-template-areas: "tituloBienvenida tituloBienvenida"
+                        "descripcion img";
+    margin-top: 42px;
+    align-items: center;
+    gap: 30px;
+}
+.seccion-bienvenida .descripcion {
+    grid-area: descripcion;
+}
+.seccion-bienvenida .descripcion h2{
+    margin-bottom: 22px;
+    font-size: 28px;
+    color: #fff;
+}
+.seccion-bienvenida .descripcion p{
+    color: #fff;
+    margin-bottom: 16px;
+    margin-left: 8px;
+}
+.seccion-bienvenida .img-bienvenida{
+    grid-area: img;
+}
+.seccion-bienvenida .img-bienvenida img{
+    display:block;
+    max-width: 80%;
+    margin: auto;
+}
+/* SECCION PRODUCTOS */
+.seccion-productos{
+    padding: 32px 0;
+    background-color: #2cb7ee;
+}
+.seccion-productos .titulo-seccion{
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 32px;
+    grid-area: tituloProductos;
+}
+.seccion-productos .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px auto;
+    grid-template-areas:    "tituloProductos tituloProductos tituloProductos"
+                            "producto1 producto2 producto3";
+    gap: 16px;
+}
+.seccion-productos .producto{
+    padding-bottom: 16px;
+    text-align: center;
+}
+.seccion-productos .prod1{
+    background-color: #ffab5f;
+    grid-area: producto1;
+}
+.seccion-productos .prod2{
+    background-color: #f4f8f9;
+    grid-area: producto2;
+}
+.seccion-productos .prod3{
+    background-color: #ffb98f;
+    grid-area: producto3;
+}
+.seccion-productos img{
+    margin-bottom: 16px;
+}
+.seccion-productos .producto p{
+    font-size: 22px;
+}
+.seccion-productos .producto .btn-mas{
+    display: block;
+    max-width: 120px;
+    margin: auto;
+    color: #000;
+    margin-top: 16px;
+    text-decoration: none;
+    padding: 8px 0;
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 5px;
+}
+/* FOOTER */
+footer{
+    padding: 16px 0;
+    width: 100%;
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+}
+footer p{
+    margin-bottom: 16px;
+    grid-area: copyright;
+}
+footer i{
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 20px;
+}
+.subir{
+    height: 60px;
+    width: 60px;
+    background-color: aquamarine;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 3px solid #3584ca;
+    color: #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+
+}
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas: "copyright"
+                            "redes";
+    align-items: center;
+}
+
+footer .social-media{
+    grid-area: redes;
+}
+
+/* PAGINA PRODUCTOS */
+.pagina-productos .nuestros-productos{
+    padding: 32px 0;
+    background: url("../img/agua.webp");
+    background-size: cover;
+    background-position: center center;
+}
+.pagina-productos .nuestros-productos .container{
+    display: grid;
+    gap: 30px;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: auto auto auto 100px;
+    grid-template-areas:"tituloSeccion tituloSeccion tituloSeccion"
+                        "producto1 producto2 producto3"
+                        "producto4 producto5 producto6"
+                        "metodoPago metodoPago metodoPago";
+}
+.pagina-productos .nuestros-productos .titulo-seccion{
+    grid-area: tituloSeccion;
+    text-align: center;
+}
+.pagina-productos .nuestros-productos .producto {
+    text-align: center;
+}
+.pagina-productos .nuestros-productos .producto p{
+    font-size: 28px;
+    
+}
+.pagina-productos .nuestros-productos .producto .titulo-producto{
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 18px;
+}
+.pagina-productos .nuestros-productos .producto img{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.pagina-productos .nuestros-productos .producto1{
+    grid-area: producto1;
+    background-color: #ffab5f;
+}
+.pagina-productos .nuestros-productos .producto2{
+    grid-area: producto2;
+    background-color: #f4f8f9;
+}
+.pagina-productos .nuestros-productos .producto3{
+    grid-area: producto3;
+    background-color: #ffb98f;
+}
+.pagina-productos .nuestros-productos .producto4{
+    grid-area: producto4;
+    background-color: #ffb98f;
+}
+.pagina-productos .nuestros-productos .producto5{
+    grid-area: producto5;
+    background-color: #f4f8f9;
+}
+.pagina-productos .nuestros-productos .producto6{
+    grid-area: producto6;
+    background-color: #ffab5f;
+}
+
+.pagina-productos .nuestros-productos .medios-pago{
+    grid-area: metodoPago;
+    text-align: center;
+    background-color: #2cb7ee;
+    padding: 1rem 0.6rem;
+    color: #fff;
+}
+
+
+
+/* pagina contacto */
+.pagina-contacto .contacto{
+    padding: 32px 0;
+    background: url('../img/redes.jpg');
+    background-size: cover;
+    background-position: center
+}
+.pagina-contacto .contacto .container{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows: 80px auto;
+    grid-template-areas:"tituloFormulario tituloFormulario"
+                        "formulario redes"
+                        ;
+    column-gap: 30px;
+    
+}
+.contacto .titulo_seccion{
+    text-align: center;
+    grid-area: tituloFormulario;
+    color: #fff;
+}
+.contacto .form-contact{
+    grid-area: formulario;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px 0;
+    background-color: #2cb7ee6e;
+}
+.contacto .form-contact label{
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+.contacto .form-contact input,.contacto .form-contact textarea{
+    padding: .2rem;
+}
+.contacto .redes-sociales{
+    grid-area: redes;
+    text-align: center;
+}
+.contacto .redes-sociales ul{
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    background-color: #2c75eea8;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 20px;
+    color: #fff;
+}
+.contacto .redes-sociales ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.contacto .form-contact .btn-enviar{
+    padding: 0.5rem;
+    background-color: #2c75ee;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.contacto .form-contact .btn-enviar:hover{
+    transition: all .5s ease;
+    opacity: .6;
+}
+
+/* PAGINA REGISTRO */
+.pagina-registro .registro{
+    padding: 32px 0;
+    background: url('../img/mar2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.pagina-registro .registro .container{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows: 80px auto;
+    grid-template-areas:"tituloFormulario tituloFormulario"
+                        "formulario mensaje"
+                        ;
+    column-gap: 30px;
+    
+}
+.registro .titulo_seccion{
+    text-align: center;
+    grid-area: tituloFormulario;
+}
+.registro .form-registro{
+    grid-area: formulario;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px 0;
+    background-color: #2cb7ee6e;
+}
+.registro .mensaje{
+    grid-area: mensaje;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #2c75ee;
+    gap: 30px;
+    justify-content: center;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.registro .form-registro label{
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+.registro .form-registro label:last-child{
+    margin: 1.2rem 0;
+    display: inline-block;
+}
+.registro .form-registro input,.registro .form-registro textarea{
+    padding: .2rem;
+}
+.registro .form-registro .btn-registro{
+    padding: 0.5rem;
+    background-color: #2c75ee;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.registro .form-registro .btn-registro:hover{
+    transition: all .5s ease;
+    opacity: .6;
+}
+/* PAGINA UBICACION */
+.pagina-ubicacion .ubicacion{
+    padding: 32px 0;
+    background: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center
+}
+.pagina-ubicacion .ubicacion .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:"tituloSeccion tituloSeccion"
+                        "mapa mapa"
+                        "descripcion descripcion";
+                        gap: 20px;
+}
+.pagina-ubicacion .ubicacion .titulo-seccion{
+grid-area: tituloSeccion;
+text-align: center;
+margin-bottom: 32px;
+}
+.pagina-ubicacion .ubicacion .mapa{
+grid-area: mapa;
+}
+.pagina-ubicacion .ubicacion .descripcion{
+grid-area: descripcion;
+text-align: center;
+background-color: #2cb7ee;
+padding: 1rem 0.6rem;
+color: #fff;
+}
+.pagina-ubicacion .ubicacion .descripcion p{
+    margin: 1rem 0;
+}
+.pagina-ubicacion .ubicacion .descripcion a{
+    color: #2c75ee;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* RESPONSIVE */
+/* MEDIAQUERY MOBILE */
+@media only screen and (min-width:320px) and (max-width:767px) {
+    header .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 200px;
+        grid-template-areas: "logo"
+                            "navMenu";
+    }
+    header .logo {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    header .nav1 ul{
+        flex-direction: column;
+    }
+    header .nav1 ul li{
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    /* ESTILOS SECCION BIENVENIDA */
+    .seccion-bienvenida {
+        height: auto;
+    }
+    .seccion-bienvenida .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 300px 650px ;
+        grid-template-areas:"tituloBienvenida"
+                            "img"
+                            "descripcion";
+    }
+    .seccion-bienvenida .descripcion{
+        text-align: center;
+    }
+    .seccion-bienvenida .descripcion p{
+        font-size: 18px;
+    }
+    /* SECCION PRODUCTOS */
+    .seccion-productos .container{
+        grid-template-rows: 100px auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:"tituloProductos"
+                            "producto1"
+                            "producto2"
+                            "producto3";
+    }
+    /* PAGINA PRODUCTOS  */
+    .pagina-productos .nuestros-productos .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
+        grid-template-areas:"tituloSeccion"
+                            "producto1"
+                            "producto2"
+                            "producto3"
+                            "producto4"
+                            "producto5"
+                            "producto6"
+                            "metodoPago" ;
+    }
+    /* PAGINA CONTACTO */
+    .pagina-contacto .contacto .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:"tituloFormulario"
+                            "formulario"
+                            "redes";
+        gap: 30px;
+    }
+    .pagina-contacto .contacto .redes-sociales ul{
+        padding: 1rem 0;
+    }
+    /* PAGINA registro */
+    .pagina-registro .registro .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:"tituloFormulario"
+                            "formulario"
+                            "mensaje";
+        gap: 30px;
+    }
+    .registro .form-registro label:last-child{
+        font-size: 13px;
+    }
+}
+
+
+
+/* MEDIAQUERY TABLET */
+@media only screen and (min-width:768px) and (max-width:1023px){
+    header .logo{
+        font-size: 32px;
+    }
+
+    .seccion-bienvenida .container{
+        grid-template-rows: 100px 500px;
+    }
+    .seccion-productos .container{
+        grid-template-rows: 100px auto;
+    }
+    .pagina-productos .nuestros-productos .container{
+        grid-template-rows: auto auto auto auto;
+    }
+    .pagina-productos .nuestros-productos .producto p{
+        font-size: 24px;
+    }
+}
+@media screen and (min-with:1024px) {
+    .seccion-bienvenida .container{
+        grid-template-rows: 200px 600px;
+    }
+    .seccion-productos .container{
+        grid-template-rows: 150px 500px;
+    }
+    .pagina-productos .nuestros-productos .container{
+        grid-template-rows: auto auto auto auto;
+    }
+    .pagina-productos .nuestros-productos .producto p{
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (min-width:1960px) {
+    .contacto .form-contact input,.contacto .form-contact textarea{
+        width: 30%;
+    }
+    .registro .form-registro input{
+        width: 30%;
+    }
+    .registro .form-registro #condiciones{
+        width: auto;
+    }
+}
