@@ -12,6 +12,23 @@ body{
 h1,h2,h3,h4,h5,h6{
     font-family: 'Oswald', sans-serif;
 }
+@keyframes logoDesplazamiento{
+    0%{
+        transform: scale(0.5) ;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes tituloDesplazamiento{
+    0%{
+        transform: translateX(-1000px) ;
+    }
+    
+    100%{
+        transform: translateX(0px);
+    }
+}
 .container{
     width: 90%;
     margin: auto;
@@ -23,6 +40,10 @@ h1,h2,h3,h4,h5,h6{
     color: #fff;
     border-bottom: 1px solid;
 }
+.logo{
+    animation-name: logoDesplazamiento;
+    animation-duration: 2s;
+}
 .logo a{
     color: #000;
     text-decoration: none;
@@ -33,7 +54,7 @@ h1,h2,h3,h4,h5,h6{
 /* estilos del header del index */
 header{
     width: 100%;
-    background-color: #2cb7ee;
+    background-image: linear-gradient(to left, #fff,#2cb7ee);
     font-size: 50px;
     color: #000000;
     padding: 20px 0;
@@ -86,6 +107,8 @@ header nav{
     text-align: center;
     font-size: 42px;
     grid-area: tituloBienvenida;
+    animation-name: tituloDesplazamiento;
+    animation-duration: 2s;
 }
 .seccion-bienvenida .container{
     display: grid;
@@ -121,7 +144,7 @@ header nav{
 /* SECCION PRODUCTOS */
 .seccion-productos{
     padding: 32px 0;
-    background-color: #2cb7ee;
+    background-image: linear-gradient(to left, #fff,#2cb7ee);
 }
 .seccion-productos .titulo-seccion{
     text-align: center;
@@ -170,6 +193,10 @@ header nav{
     text-align: center;
     background-color: aquamarine;
     border-radius: 5px;
+    transition: all .5s ease;
+}
+.seccion-productos .producto .btn-mas:hover{
+    transform: scale(1.2);
 }
 /* FOOTER */
 footer{
@@ -188,6 +215,10 @@ footer i{
     font-size: 30px;
     color: #ffffff;
     letter-spacing: 20px;
+    transition: all .5s ease;
+}
+footer i:hover{
+    transform: scale(1.2);
 }
 .subir{
     height: 60px;
@@ -227,7 +258,7 @@ footer .social-media{
 }
 .pagina-productos .nuestros-productos .container{
     display: grid;
-    gap: 30px;
+    gap: 50px;
     grid-template-columns:repeat(3,1fr);
     grid-template-rows: auto auto auto 100px;
     grid-template-areas:"tituloSeccion tituloSeccion tituloSeccion"
@@ -238,9 +269,15 @@ footer .social-media{
 .pagina-productos .nuestros-productos .titulo-seccion{
     grid-area: tituloSeccion;
     text-align: center;
+    font-size: 42px;
+    animation-name: tituloDesplazamiento;
+    animation-duration: 2s;
 }
 .pagina-productos .nuestros-productos .producto {
     text-align: center;
+}
+.pagina-productos .nuestros-productos .producto:hover {
+    transform: rotate(5deg);
 }
 .pagina-productos .nuestros-productos .producto p{
     font-size: 28px;
@@ -311,6 +348,9 @@ footer .social-media{
     text-align: center;
     grid-area: tituloFormulario;
     color: #fff;
+    font-size: 42px;
+    animation-name: tituloDesplazamiento;
+    animation-duration: 2s;
 }
 .contacto .form-contact{
     grid-area: formulario;
@@ -362,6 +402,24 @@ footer .social-media{
 }
 
 /* PAGINA REGISTRO */
+@keyframes desplazamientoColumna1{
+    0%{
+        transform:translateX(-500px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+@keyframes desplazamientoColumna2{
+    0%{
+        transform:translateX(500px);
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
 .pagina-registro .registro{
     padding: 32px 0;
     background: url('../img/mar2.jpg');
@@ -381,6 +439,9 @@ footer .social-media{
 .registro .titulo_seccion{
     text-align: center;
     grid-area: tituloFormulario;
+    font-size: 42px;
+    animation-name: tituloDesplazamiento;
+    animation-duration: 2s;
 }
 .registro .form-registro{
     grid-area: formulario;
@@ -388,6 +449,8 @@ footer .social-media{
     border-radius: 5px;
     padding: 16px 0;
     background-color: #2cb7ee6e;
+    animation-name: desplazamientoColumna1;
+    animation-duration: 1s;
 }
 .registro .mensaje{
     grid-area: mensaje;
@@ -400,6 +463,8 @@ footer .social-media{
     color: #fff;
     padding: 1rem;
     border-radius: 5px;
+    animation-name: desplazamientoColumna2;
+    animation-duration: 1s;
 }
 .registro .form-registro label{
     display: block;
@@ -443,9 +508,12 @@ footer .social-media{
                         gap: 20px;
 }
 .pagina-ubicacion .ubicacion .titulo-seccion{
-grid-area: tituloSeccion;
-text-align: center;
-margin-bottom: 32px;
+    grid-area: tituloSeccion;
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 42px;
+    animation-name: tituloDesplazamiento;
+    animation-duration: 2s;
 }
 .pagina-ubicacion .ubicacion .mapa{
 grid-area: mapa;
