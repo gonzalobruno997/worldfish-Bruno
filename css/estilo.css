@@ -29,17 +29,8 @@ h1,h2,h3,h4,h5,h6{
         transform: translateX(0px);
     }
 }
-.container{
-    width: 90%;
-    margin: auto;
-}
-.img-width{
-    width: 100%;
-}
-.active{
-    color: #fff;
-    border-bottom: 1px solid;
-}
+
+
 .logo{
     animation-name: logoDesplazamiento;
     animation-duration: 2s;
@@ -59,43 +50,22 @@ header{
     color: #000000;
     padding: 20px 0;
 }
-header .container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-areas: "logo navMenu navMenu";
-}
-header nav{
-    grid-area: navMenu;
-}
 
-.logo{
-    grid-area: logo;
-}
+
 .logo:hover{
     color: #ffffff;
 }
-.nav1 ul{
-    display: flex;
+header .nav-link {
+    font-size: 18px;
+}
+header .navbar-collapse{
     justify-content: flex-end;
-    height: 100%;
-    align-items: center;
 }
-.nav1 ul li{
-    list-style: none;
-    margin-right: 18px;
-    font-size: 16px;
-    text-align: center;
-
+header .navbar-brand{
+    font-size: 40px;
 }
 
-.nav1 ul li a{
-    text-decoration: none;
-    color: #000000;
-    margin-left: 6px;
-}
-.nav1 ul li:hover a, .nav1 ul li:hover i{
-    color: #fff;
-}
+
 /* ESTILOS SECCION BIENVENIDA */
 .seccion-bienvenida{
     padding: 32px 0;
@@ -106,23 +76,11 @@ header nav{
 .seccion-bienvenida h1{
     text-align: center;
     font-size: 42px;
-    grid-area: tituloBienvenida;
     animation-name: tituloDesplazamiento;
     animation-duration: 2s;
 }
-.seccion-bienvenida .container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 100px 600px;
-    grid-template-areas: "tituloBienvenida tituloBienvenida"
-                        "descripcion img";
-    margin-top: 42px;
-    align-items: center;
-    gap: 30px;
-}
-.seccion-bienvenida .descripcion {
-    grid-area: descripcion;
-}
+
+
 .seccion-bienvenida .descripcion h2{
     margin-bottom: 22px;
     font-size: 28px;
@@ -133,9 +91,7 @@ header nav{
     margin-bottom: 16px;
     margin-left: 8px;
 }
-.seccion-bienvenida .img-bienvenida{
-    grid-area: img;
-}
+
 .seccion-bienvenida .img-bienvenida img{
     display:block;
     max-width: 80%;
@@ -150,31 +106,22 @@ header nav{
     text-align: center;
     font-size: 38px;
     margin-bottom: 32px;
-    grid-area: tituloProductos;
 }
-.seccion-productos .container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 100px auto;
-    grid-template-areas:    "tituloProductos tituloProductos tituloProductos"
-                            "producto1 producto2 producto3";
-    gap: 16px;
-}
+
 .seccion-productos .producto{
     padding-bottom: 16px;
     text-align: center;
 }
 .seccion-productos .prod1{
     background-color: #ffab5f;
-    grid-area: producto1;
+    
 }
 .seccion-productos .prod2{
     background-color: #f4f8f9;
-    grid-area: producto2;
 }
 .seccion-productos .prod3{
     background-color: #ffb98f;
-    grid-area: producto3;
+    
 }
 .seccion-productos img{
     margin-bottom: 16px;
@@ -209,7 +156,6 @@ footer{
 }
 footer p{
     margin-bottom: 16px;
-    grid-area: copyright;
 }
 footer i{
     font-size: 30px;
@@ -234,20 +180,10 @@ footer i:hover{
     border: 3px solid #3584ca;
     color: #ffffff;
     box-shadow: 0 0 10px #ffffff;
-
-}
-footer .container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 50px;
-    grid-template-areas: "copyright"
-                            "redes";
-    align-items: center;
 }
 
-footer .social-media{
-    grid-area: redes;
-}
+
+
 
 /* PAGINA PRODUCTOS */
 .pagina-productos .nuestros-productos{
@@ -256,18 +192,8 @@ footer .social-media{
     background-size: cover;
     background-position: center center;
 }
-.pagina-productos .nuestros-productos .container{
-    display: grid;
-    gap: 50px;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows: auto auto auto 100px;
-    grid-template-areas:"tituloSeccion tituloSeccion tituloSeccion"
-                        "producto1 producto2 producto3"
-                        "producto4 producto5 producto6"
-                        "metodoPago metodoPago metodoPago";
-}
+
 .pagina-productos .nuestros-productos .titulo-seccion{
-    grid-area: tituloSeccion;
     text-align: center;
     font-size: 42px;
     animation-name: tituloDesplazamiento;
@@ -293,7 +219,6 @@ footer .social-media{
     border-top-left-radius: 5px;
 }
 .pagina-productos .nuestros-productos .producto1{
-    grid-area: producto1;
     background-color: #ffab5f;
 }
 .pagina-productos .nuestros-productos .producto2{
@@ -301,24 +226,19 @@ footer .social-media{
     background-color: #f4f8f9;
 }
 .pagina-productos .nuestros-productos .producto3{
-    grid-area: producto3;
     background-color: #ffb98f;
 }
 .pagina-productos .nuestros-productos .producto4{
-    grid-area: producto4;
     background-color: #ffb98f;
 }
 .pagina-productos .nuestros-productos .producto5{
-    grid-area: producto5;
     background-color: #f4f8f9;
 }
 .pagina-productos .nuestros-productos .producto6{
-    grid-area: producto6;
     background-color: #ffab5f;
 }
 
 .pagina-productos .nuestros-productos .medios-pago{
-    grid-area: metodoPago;
     text-align: center;
     background-color: #2cb7ee;
     padding: 1rem 0.6rem;
@@ -334,26 +254,15 @@ footer .social-media{
     background-size: cover;
     background-position: center
 }
-.pagina-contacto .contacto .container{
-    display: grid;
-    grid-template-columns:repeat(2, 1fr) ;
-    grid-template-rows: 80px auto;
-    grid-template-areas:"tituloFormulario tituloFormulario"
-                        "formulario redes"
-                        ;
-    column-gap: 30px;
-    
-}
+
 .contacto .titulo_seccion{
     text-align: center;
-    grid-area: tituloFormulario;
     color: #fff;
     font-size: 42px;
     animation-name: tituloDesplazamiento;
     animation-duration: 2s;
 }
 .contacto .form-contact{
-    grid-area: formulario;
     text-align: center;
     border-radius: 6px;
     padding: 16px 0;
@@ -368,7 +277,6 @@ footer .social-media{
     padding: .2rem;
 }
 .contacto .redes-sociales{
-    grid-area: redes;
     text-align: center;
 }
 .contacto .redes-sociales ul{
@@ -426,25 +334,14 @@ footer .social-media{
     background-size: cover;
     background-position: center;
 }
-.pagina-registro .registro .container{
-    display: grid;
-    grid-template-columns:repeat(2, 1fr) ;
-    grid-template-rows: 80px auto;
-    grid-template-areas:"tituloFormulario tituloFormulario"
-                        "formulario mensaje"
-                        ;
-    column-gap: 30px;
-    
-}
+
 .registro .titulo_seccion{
     text-align: center;
-    grid-area: tituloFormulario;
     font-size: 42px;
     animation-name: tituloDesplazamiento;
     animation-duration: 2s;
 }
 .registro .form-registro{
-    grid-area: formulario;
     text-align: center;
     border-radius: 5px;
     padding: 16px 0;
@@ -453,7 +350,6 @@ footer .social-media{
     animation-duration: 1s;
 }
 .registro .mensaje{
-    grid-area: mensaje;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -498,28 +394,20 @@ footer .social-media{
     background-size: cover;
     background-position: center
 }
-.pagina-ubicacion .ubicacion .container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: auto auto auto;
-    grid-template-areas:"tituloSeccion tituloSeccion"
-                        "mapa mapa"
-                        "descripcion descripcion";
-                        gap: 20px;
-}
+
 .pagina-ubicacion .ubicacion .titulo-seccion{
-    grid-area: tituloSeccion;
+    
     text-align: center;
     margin-bottom: 32px;
     font-size:42px;
     animation-name: tituloDesplazamiento;
     animation-duration: 2s;
 }
-.pagina-ubicacion .ubicacion .mapa{
-grid-area: mapa;
+.pagina-ubicacion .descripcion ul{
+    list-style: none;
+
 }
 .pagina-ubicacion .ubicacion .descripcion{
-grid-area: descripcion;
 text-align: center;
 background-color: #2cb7ee;
 padding: 1rem 0.6rem;
@@ -536,12 +424,7 @@ color: #fff;
 /* RESPONSIVE */
 /* MEDIAQUERY MOBILE */
 @media only screen and (min-width:320px) and (max-width:767px) {
-    header .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 200px;
-        grid-template-areas: "logo"
-                            "navMenu";
-    }
+    
     header .logo {
         text-align: center;
         margin-bottom: 20px;
@@ -557,13 +440,7 @@ color: #fff;
     .seccion-bienvenida {
         height: auto;
     }
-    .seccion-bienvenida .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 300px 650px ;
-        grid-template-areas:"tituloBienvenida"
-                            "img"
-                            "descripcion";
-    }
+    
     .seccion-bienvenida .descripcion{
         text-align: center;
     }
@@ -571,48 +448,16 @@ color: #fff;
         font-size: 18px;
     }
     /* SECCION PRODUCTOS */
-    .seccion-productos .container{
-        grid-template-rows: 100px auto auto auto;
-        grid-template-columns: 1fr;
-        grid-template-areas:"tituloProductos"
-                            "producto1"
-                            "producto2"
-                            "producto3";
-    }
+    
     /* PAGINA PRODUCTOS  */
-    .pagina-productos .nuestros-productos .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto auto;
-        grid-template-areas:"tituloSeccion"
-                            "producto1"
-                            "producto2"
-                            "producto3"
-                            "producto4"
-                            "producto5"
-                            "producto6"
-                            "metodoPago" ;
-    }
+    
     /* PAGINA CONTACTO */
-    .pagina-contacto .contacto .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:"tituloFormulario"
-                            "formulario"
-                            "redes";
-        gap: 30px;
-    }
+    
     .pagina-contacto .contacto .redes-sociales ul{
         padding: 1rem 0;
     }
     /* PAGINA registro */
-    .pagina-registro .registro .container{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:"tituloFormulario"
-                            "formulario"
-                            "mensaje";
-        gap: 30px;
-    }
+    
     .registro .form-registro label:last-child{
         font-size: 13px;
     }
@@ -625,30 +470,12 @@ color: #fff;
     header .logo{
         font-size: 32px;
     }
-
-    .seccion-bienvenida .container{
-        grid-template-rows: 100px 500px;
-    }
-    .seccion-productos .container{
-        grid-template-rows: 100px auto;
-    }
-    .pagina-productos .nuestros-productos .container{
-        grid-template-rows: auto auto auto auto;
-    }
     .pagina-productos .nuestros-productos .producto p{
         font-size: 24px;
     }
 }
 @media screen and (min-with:1024px) {
-    .seccion-bienvenida .container{
-        grid-template-rows: 200px 600px;
-    }
-    .seccion-productos .container{
-        grid-template-rows: 150px 500px;
-    }
-    .pagina-productos .nuestros-productos .container{
-        grid-template-rows: auto auto auto auto;
-    }
+    
     .pagina-productos .nuestros-productos .producto p{
         font-size: 24px;
     }
