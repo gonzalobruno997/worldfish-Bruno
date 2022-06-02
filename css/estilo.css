@@ -39,9 +39,6 @@ h1,h2,h3,h4,h5,h6{
     color: #000;
     text-decoration: none;
 }
-.logo a:hover{
-    color: #fff;
-}
 /* estilos del header del index */
 header{
     width: 100%;
@@ -49,11 +46,6 @@ header{
     font-size: 50px;
     color: #000000;
     padding: 20px 0;
-}
-
-
-.logo:hover{
-    color: #ffffff;
 }
 header .nav-link {
     font-size: 18px;
@@ -218,25 +210,17 @@ footer i:hover{
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
 }
-.pagina-productos .nuestros-productos .producto1{
+.pagina-productos .nuestros-productos .row div:nth-child(1) .producto{
     background-color: #ffab5f;
 }
-.pagina-productos .nuestros-productos .producto2{
-    grid-area: producto2;
+.pagina-productos .nuestros-productos .row div:nth-child(2) .producto{
+    
     background-color: #f4f8f9;
 }
-.pagina-productos .nuestros-productos .producto3{
+.pagina-productos .nuestros-productos .row div:nth-child(3) .producto{
     background-color: #ffb98f;
 }
-.pagina-productos .nuestros-productos .producto4{
-    background-color: #ffb98f;
-}
-.pagina-productos .nuestros-productos .producto5{
-    background-color: #f4f8f9;
-}
-.pagina-productos .nuestros-productos .producto6{
-    background-color: #ffab5f;
-}
+
 
 .pagina-productos .nuestros-productos .medios-pago{
     text-align: center;
@@ -373,6 +357,10 @@ footer i:hover{
 }
 .registro .form-registro input,.registro .form-registro textarea{
     padding: .2rem;
+}
+.registro .form-registro input:focus{
+    outline: 1px solid #2c75ee;
+    box-shadow: 1px 1px #ffffff;
 }
 .registro .form-registro .btn-registro{
     padding: 0.5rem;
