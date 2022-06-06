@@ -1,0 +1,122 @@
+@import "_colores.scss";
+header{
+    width: 100%;
+    background-image: linear-gradient(to left, #fff,#2cb7ee);
+    font-size: 50px;
+    color: #000000;
+    padding: 20px 0;
+    .navbar{
+        .navbar-brand{
+            animation-name: logoDesplazamiento;
+            animation-duration: 2s;
+            font-size: 40px;
+        }
+        .nav-link {
+            font-size: 18px;
+        }
+        .navbar-collapse{
+            justify-content: flex-end;
+        }
+    }
+}
+.seccion-bienvenida{
+    padding: 32px 0;
+    width: 100%;
+    background-image: url(../img/mar.jpg);
+    background-size: cover;
+    h1{
+        text-align: center;
+        font-size: 42px;
+        animation-name: tituloDesplazamiento;
+        animation-duration: 2s;
+    }
+    .descripcion{
+        h2{
+            margin-bottom: 22px;
+            font-size: 28px;
+            color: #fff;
+        }
+        p{
+            color: #fff;
+            margin-bottom: 16px;
+            margin-left: 8px;
+        }
+    }
+    .img-bienvenida{
+        img{
+            display:block;
+            max-width: 80%;
+            margin: auto;
+        }
+    }
+    
+}
+.seccion-productos{
+    padding: 32px 0;
+    background-image: linear-gradient(to left, #fff,#2cb7ee);
+    .titulo-seccion{
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 32px;
+    }
+    .producto{
+        padding-bottom: 16px;
+        text-align: center;
+        img{
+            margin-bottom: 16px;
+        }
+        p{
+            font-size: 22px;
+        }
+        .btn-mas{
+            display: block;
+            max-width: 120px;
+            margin: auto;
+            color: #000;
+            margin-top: 16px;
+            text-decoration: none;
+            padding: 8px 0;
+            text-align: center;
+            background-color: $color-enfasis;
+            border-radius: 5px;
+            transition: all .5s ease;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .prod1{
+        background-color: #ffab5f;
+    }
+    .prod2{
+        background-color: #f4f8f9;
+    }
+    .prod3{
+        background-color: #ffb98f;
+        
+    }
+}
+footer{
+    padding: 16px 0;
+    width: 100%;
+    background-color: #000;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    p{
+        margin-bottom: 16px;
+    }
+    .social-media{
+        a{
+            i{
+                font-size: 30px;
+                color: #ffffff;
+                letter-spacing: 20px;
+                transition: all .5s ease;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
