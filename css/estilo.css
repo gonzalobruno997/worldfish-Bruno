@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,7 +28,7 @@ h1,h2,h3,h4,h5,h6{
     100%{
         transform: translateX(0px);
     }
-}
+} */
 
 /*  
 .logo{
@@ -92,6 +92,7 @@ header .navbar-brand{
     margin: auto;
 }*/
 /* SECCION PRODUCTOS */
+/*
 .seccion-productos{
     padding: 32px 0;
     background-image: linear-gradient(to left, #fff,#2cb7ee);
@@ -138,7 +139,7 @@ header .navbar-brand{
 }
 .seccion-productos .producto .btn-mas:hover{
     transform: scale(1.2);
-}
+}*/
 /* FOOTER */
 /*footer{
     padding: 16px 0;
@@ -160,7 +161,7 @@ footer i{
 footer i:hover{
     transform: scale(1.2);
 }*/
-.subir{
+/* .subir{
     height: 60px;
     width: 60px;
     background-color: aquamarine;
@@ -174,18 +175,18 @@ footer i:hover{
     border: 3px solid #3584ca;
     color: #ffffff;
     box-shadow: 0 0 10px #ffffff;
-}
+} */
 
 
 
 
 /* PAGINA PRODUCTOS */
-.pagina-productos .nuestros-productos{
+/* .pagina-productos .nuestros-productos{
     padding: 32px 0;
     background: url("../img/agua.webp");
     background-size: cover;
     background-position: center center;
-}
+} 
 
 .pagina-productos .nuestros-productos .titulo-seccion{
     text-align: center;
@@ -229,12 +230,12 @@ footer i:hover{
     background-color: #2cb7ee;
     padding: 1rem 0.6rem;
     color: #fff;
-}
+}*/
 
 
 
 /* pagina contacto */
-.pagina-contacto .contacto{
+/*.pagina-contacto .contacto{
     padding: 32px 0;
     background: url('../img/redes.jpg');
     background-size: cover;
@@ -293,10 +294,10 @@ footer i:hover{
 .contacto .form-contact .btn-enviar:hover{
     transition: all .5s ease;
     opacity: .6;
-}
+}*/
 
 /* PAGINA REGISTRO */
-@keyframes desplazamientoColumna1{
+/*@keyframes desplazamientoColumna1{
     0%{
         transform:translateX(-500px);
     }
@@ -376,9 +377,9 @@ footer i:hover{
 .registro .form-registro .btn-registro:hover{
     transition: all .5s ease;
     opacity: .6;
-}
+}*/
 /* PAGINA UBICACION */
-.pagina-ubicacion .ubicacion{
+/* .pagina-ubicacion .ubicacion{
     padding: 32px 0;
     background: url('../img/fondo.jpg');
     background-size: cover;
@@ -410,7 +411,7 @@ color: #fff;
     color: #2c75ee;
     text-decoration: none;
     font-weight: bold;
-}
+} */
 /* RESPONSIVE */
 /* MEDIAQUERY MOBILE */
 @media only screen and (min-width:320px) and (max-width:767px) {
